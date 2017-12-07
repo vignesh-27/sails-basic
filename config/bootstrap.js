@@ -10,8 +10,18 @@
  */
 
 module.exports.bootstrap = function(cb) {
+ 
+  var userobj = {username:"vignesh", password:"vicky4321", role:1};
+  Authentication.create(userobj).exec((err)=>{
+    if(err){
+       console.log("Defaulet user not created");
+    }else{
+    console.log("Default user Vignesh Created");
+    }
+});
 
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
+
   cb();
 };

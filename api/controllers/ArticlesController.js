@@ -35,6 +35,7 @@ module.exports = {
             res.redirect('/articles/list');
         });
     },
+
     edit:(req, res)=>{
         Articles.find({id:req.params.id}).exec((err, data)=>{
             if(err){
@@ -43,6 +44,7 @@ module.exports = {
             res.view('edit', {article:data});
         });
     },
+
     update:(req, res)=>{
         var title = req.body.title;
         var body = req.body.body;
@@ -54,5 +56,6 @@ module.exports = {
         });
         return false;
     }
+    
 };
 

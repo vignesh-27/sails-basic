@@ -40,7 +40,14 @@ module.exports.routes = {
   'GET /edit/:id': {controller: "Articles", action: "edit"},
   'POST /create': {controller: "Articles", action: "create"},
   'POST /delete/:id': {controller: "Articles", action: "delete"},
-  'POST /update/:id': {controller: "Articles", action: "update"}
+  'POST /update/:id': {controller: "Articles", action: "update"},
+  'GET /login': {controller: "Authentication", action: "login"},
+  'GET /signup': {controller: "Authentication", action: "signup"},
+  'POST /addsignup': {controller: "Authentication", action: "addsignup"},
+  'POST /authlogin': {controller: "Authentication", action: "Auth_check"}
+  
+  
+  
   
   
   
